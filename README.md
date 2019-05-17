@@ -1,0 +1,1 @@
+# QQCompiler-CoolQ-DIR
