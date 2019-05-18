@@ -79,11 +79,13 @@ def write_json(player, changeType, changeValue):
         printValue = printValue + "Player: " + player + "\n"
         originalValue = data[player][changeType]
         if (changeValue[0] == "+"):
-            data[player][changeType] = data[player][changeType] + int(changeValue[1:])
+            data[player][changeType] = int(data[player][changeType]) + int(changeValue[1:])
         elif (changeValue[0] == "-"):
-            data[player][changeType] = data[player][changeType] - int(changeValue[1:])
+            data[player][changeType] = int(data[player][changeType]) - int(changeValue[1:])
+        else:
+            data[player][changeType] = changeValue
         newValue = data[player][changeType]
-        printValue = printValue + changeType + ", " + str(originalValue) + " -> " + str(newValue) + "\n"
+        printValue = printValue + changeType + ": " + str(originalValue) + " -> " + str(newValue) + "\n"
         print (printValue)
         modify_file(data)
 
