@@ -37,7 +37,7 @@ for line in contents:
 		if (x < 2):
 			newline.append(int(thisline[x]))
 		elif (x == 2):
-			newline.append(127)
+			newline.append(135) # velocity here!
 		else:
 			newline.append(int(thisline[x-1]))
 	midinotes.append(newline)
